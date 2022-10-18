@@ -218,8 +218,8 @@ class TimeSeriesEncoderClassifier(sklearn.base.BaseEstimator,
 
                     if i < 10 or i%100 == 99:
                         print(f'epoch {i+1} - batch {batch_index}:')
-                        print(f'\tdist_positive: {dist_positive_list}\t|\tdist_negative: {dist_negative_list}')
-                        print(f'\tdist_intra_positive_list: {dist_intra_positive_list}\t|\tdist_intra_negative_list: {dist_intra_negative_list}')
+                        # print(f'\tdist_positive: {dist_positive_list}\t|\tdist_negative: {dist_negative_list}')
+                        # print(f'\tdist_intra_positive_list: {dist_intra_positive_list}\t|\tdist_intra_negative_list: {dist_intra_negative_list}')
                     batch_index += 1
                 train_loss_per_fold.append(np.mean(train_loss_per_batch))
 
@@ -252,14 +252,14 @@ class TimeSeriesEncoderClassifier(sklearn.base.BaseEstimator,
                 trigger_times += 1
                 if trigger_times >= patience:
                     loss_per_epoch = {'epochs': [j for j in range(1, i+2)], 'loss':train_lossList, 'valid_loss': valid_lossList}
-                    loss_df = pd.DataFrame.from_dict(loss_per_epoch).to_csv(f'/content/drive/MyDrive/shapenet_result/loss_per_epoch_newloss_01_ratio_{ratio}.csv', index=False)
+                    loss_df = pd.DataFrame.from_dict(loss_per_epoch).to_csv(f'./shapenet_result/loss_per_epoch_newloss_01_ratio_{ratio}.csv', index=False)
                     return self.encoder
             else:
                 trigger_times = 0
             last_loss = current_loss
             
         loss_per_epoch = {'epochs': [j for j in range(1, i+2)], 'loss':train_lossList, 'valid_loss': valid_lossList}
-        loss_df = pd.DataFrame.from_dict(loss_per_epoch).to_csv(f'/content/drive/MyDrive/shapenet_result/loss_per_epoch_newlossver2_ratio_{ratio}.csv', index=False)
+        loss_df = pd.DataFrame.from_dict(loss_per_epoch).to_csv(f'./shapenet_result/loss_per_epoch_newlossver2_ratio_{ratio}.csv', index=False)
 
         return self.encoder
 
