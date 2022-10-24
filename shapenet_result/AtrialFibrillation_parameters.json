@@ -1,0 +1,1 @@
+{"compared_length": Infinity, "batch_size": 1, "epochs": 1000, "lr": 0.001, "channels": 40, "depth": 10, "reduced_size": 160, "kernel_size": 3, "in_channels": 1, "out_channels": 320, "cuda": true, "gpu": 0}
