@@ -1,1 +1,3 @@
-,ratio:	 0.6, ind:	 0, score:	 0.9466666666666667ratio:	 0.6, ind:	 1, score:	 0.95333333333333ratio:	 0.6, ind:	 2, score:	 0.9266666666666667
+ratio:	 0.6, ind:	 0, score:	 0.9466666666666667
+ratio:	 0.6, ind:	 1, score:	 0.95333333333333
+ratio:	 0.6, ind:	 2, score:	 0.9266666666666667

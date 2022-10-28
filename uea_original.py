@@ -121,11 +121,7 @@ if __name__ == '__main__':
     if args.cuda and not torch.cuda.is_available():
         print("CUDA is not available, proceeding without it...")
         args.cuda = False
-<<<<<<< HEAD
-    ratio_list = [0.6, 0.7, 0.8, 0.9]
-=======
-    ratio_list =[0.5, 0.6, 0.7, 0.8, 0.9]
->>>>>>> 79e1cbd3d3f695d2ab203798d553061732ba17e5
+    ratio_list = [0.5, 0.6, 0.7, 0.8, 0.9]
     ind_list = [0, 1, 2]
     for ratio in ratio_list:
         for ind in ind_list:
@@ -136,7 +132,7 @@ if __name__ == '__main__':
                 cluster_num = 100
                 if not args.load and not args.fit_classifier:
                     print('start new network training')
-                    save_path = args.save_path + args.dataset + '.txt'
+                    save_path = args.save_path + '/' + args.dataset + '.txt'
                     classifier = fit_parameters(
                     args.hyper, ratio, ind, train, train_labels, test, test_labels, args.cuda, args.gpu, save_path, cluster_num
                     )

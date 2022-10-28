@@ -308,10 +308,10 @@ class TimeSeriesEncoderClassifier(sklearn.base.BaseEstimator,
         score = str(self.score(test, test_labels, shapelet, shapelet_dim, utility_sort_index, final_shapelet_num))
         print("svm linear Accuracy: "+score)
         fo_shapelet =open(prefix_file, "a")
-        strings_res = f'ratio:\t {ratio}, ind:\t {ind}, score:\t {score}'
+        strings_res = f'ratio:\t {ratio}, ind:\t {ind}, score:\t {score}\n'
         fo_shapelet.write(strings_res)
         fo_shapelet.close()
-        self.save_shapelet(prefix_file, shapelet, shapelet_dim)
+        # self.save_shapelet(prefix_file, shapelet, shapelet_dim)
 
         return self
 
