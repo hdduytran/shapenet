@@ -186,7 +186,7 @@ class TimeSeriesEncoderClassifier(sklearn.base.BaseEstimator,
         patience = 3 # Early stopping
         # Encoder training
         for i in range(self.epochs):
-            priint('Epoch: ', i)
+            print('Epoch: ', i)
             epoch_start = timeit.default_timer()
             batch_index = 1
 

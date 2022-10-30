@@ -1,0 +1,1 @@
+python3 uea_original.py --dataset BasicMotions --path ../../dataset --save_path shapenet_results --cuda --hyper default_parameters.json --ratio 1
