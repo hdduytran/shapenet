@@ -165,6 +165,7 @@ class TimeSeriesEncoderClassifier(sklearn.base.BaseEstimator,
         @param verbose Enables, if True, to monitor which epoch is running in
                the encoder training.
         """
+        print('K-ford cross validation')
         n_folds = math.floor(X.shape[0] / math.ceil(X.shape[0] * 0.2))
         kfold = KFold(n_splits=n_folds, shuffle=True)
         train_torch_dataset = utils.Dataset(X)
@@ -185,6 +186,7 @@ class TimeSeriesEncoderClassifier(sklearn.base.BaseEstimator,
         patience = 3 # Early stopping
         # Encoder training
         for i in range(self.epochs):
+            priint('Epoch: ', i)
             epoch_start = timeit.default_timer()
             batch_index = 1
 
@@ -282,6 +284,7 @@ class TimeSeriesEncoderClassifier(sklearn.base.BaseEstimator,
         final_shapelet_num = 50
         # Fitting encoder
         encoder_start = timeit.default_timer()
+        print('fitting encoder')
         self.encoder = self.fit_encoder(
                                         ratio, X, y=y, save_memory=save_memory, verbose=verbose
                                         )
