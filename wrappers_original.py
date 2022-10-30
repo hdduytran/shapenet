@@ -228,7 +228,7 @@ class TimeSeriesEncoderClassifier(sklearn.base.BaseEstimator,
                     print(f"epoch {i+1} time: {(epoch_end- epoch_start)/60}")
                 if i == 399:
                     print('save')
-                    torch.save(self.encoder.state_dict(), "ArrowHead" + '_' + self.architecture + '_encoder_400.pth')
+                    # torch.save(self.encoder.state_dict(), "ArrowHead" + '_' + self.architecture + '_encoder_400.pth')
                 #epochs += 1
                 
                 # Early stopping

@@ -24,7 +24,7 @@ def load_UEA_dataset(dataset_name, train_ratio=0.9):
             labels, the testing set and the corresponding testing labels.
     """
     
-    uv_dir = "./data/" 
+    uv_dir = " /data/cs.aau.dk/ntth/data"
     data = fetch_uea_dataset(dataset_name, data_home=uv_dir)
     Train_dataset = data['data_train']
     Test_dataset = data['data_test']
