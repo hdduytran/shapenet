@@ -1,5 +1,5 @@
 {
-    "batch_size": 1,
+    "batch_size": 100,
     "channels": 40,
     "compared_length": null,
     "depth": 10,
